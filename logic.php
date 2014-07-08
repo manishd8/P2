@@ -1,29 +1,33 @@
 <?php 
 date_default_timezone_set('America/New_York');
 
-$WordCnt = 0;
-$numFlag = 'off';
-$symFlag = 'off';
-$caseFlag = 'off';
-
-$fileHandle = fopen("WordFile.txt", "r");
-
-$WordArray = file("WordFile.txt");
-$OutputPassword='';
 
 function myFunction()
 {
+	$returnArray = Array('',4,'off','off','off');
+	$OutputPassword='';
+	$caseFlag = 'off';
+	$WordArray = file("WordFile.txt");
+	$WordCnt = 0;
+	$numFlag = 'off';
+	$symFlag = 'off';
 
 	foreach ($_GET as $key => $value) {
 		if($key=="WordCount")
+		{
+			$returnArray[1] = $value;
 			$WordCnt = $value;
+		}
 		else if ($key=="NumberFlag") {
+			$returnArray[2] = $value;
 			$numFlag = $value;
 		}
 		else if ($key=="SymbolFlag") {
+			$returnArray[3] = $value;
 			$symFlag = $value;
 		}
 		else if ($key=="UpperCaseFlag") {
+			$returnArray[4] = $value;
 			$caseFlag = $value;
 		}
 	}
@@ -64,4 +68,7 @@ function myFunction()
 		$Num = rand(0,9);
 		$OutputPassword .= $Num;
 	}
+
+	$returnArray[0] = $OutputPassword;
+	return $returnArray;
 }
