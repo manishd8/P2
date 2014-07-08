@@ -56,7 +56,7 @@
               <input type="checkbox" name="NumberFlag" <?php if($ValueArray[2] == 'on') {?> checked = "checked"  <?php } ?>/>Include Number <br/><br/>
               <input type="checkbox" name="SymbolFlag" <?php if($ValueArray[3] == 'on') {?> checked = "checked"  <?php } ?>/>Include Symbols  <br/><br/>
               <input type="checkbox" name="UpperCaseFlag" <?php if($ValueArray[4] == 'on') {?> checked = "checked"  <?php } ?>/>UpperCase First Letter <br/><br/>
-              <input type="submit" value="Generate"/>
+              <input type="submit" value="Voila!" class="Submit"/>
           </form> 
 
       </div>
