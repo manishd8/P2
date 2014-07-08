@@ -54,7 +54,16 @@
               </select> &nbsp; Number of words <br/><br/>
 
               <input class="Align" type="checkbox" name="NumberFlag" <?php if($ValueArray[2] == 'on') {?> checked = "checked"  <?php } ?>/> &nbsp; Include Number <br/><br/>
-              <input class="Align" type="checkbox" name="SymbolFlag" <?php if($ValueArray[3] == 'on') {?> checked = "checked"  <?php } ?>/> &nbsp; Include Symbols  <br/><br/>
+
+              <div class="SymbolBox">
+                <input type="checkbox" name="SymbolFlag" <?php if($ValueArray[3] == 'on') {?> checked = "checked"  <?php } ?>/> &nbsp; Include Symbols  &nbsp;&nbsp;&nbsp;
+                <select name = "SymbolCount">
+                  <option value="1" <?php if($ValueArray[5] == 1) {?> selected = "selected"  <?php } ?>> 1 </option>
+                  <option value="2" <?php if($ValueArray[5] == 2) {?> selected = "selected"  <?php } ?>> 2 </option>
+                  <option value="3" <?php if($ValueArray[5] == 3) {?> selected = "selected"  <?php } ?>> 3 </option>
+                  <option value="4" <?php if($ValueArray[5] == 4) {?> selected = "selected"  <?php } ?>> 4 </option>
+                </select> How Many <br/><br/>
+              </div>
               <input class="Align" type="checkbox" name="UpperCaseFlag" <?php if($ValueArray[4] == 'on') {?> checked = "checked"  <?php } ?>/> &nbsp; UpperCase First Letter <br/><br/>
 
               <div class="HeadingBox">
@@ -65,7 +74,7 @@
       </div>
     </div><br/><br/><br/><br/>
 
-    <div align="center">
+    <div class="HeadingBox">
         <img src = "http://imgs.xkcd.com/comics/password_strength.png" alt="Xkcd PWD Generator" height='400' width='500' style="float:center">
     </div>
 

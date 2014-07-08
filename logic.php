@@ -9,6 +9,7 @@ function myFunction()
 	$caseFlag = 'off';
 	$WordArray = file("WordFile.txt");
 	$WordCnt = 0;
+	$SymCnt = 1;
 	$numFlag = 'off';
 	$symFlag = 'off';
 
@@ -29,6 +30,10 @@ function myFunction()
 		else if ($key=="UpperCaseFlag") {
 			$returnArray[4] = $value;
 			$caseFlag = $value;
+		}
+		else if ($key=="SymbolCount") {
+			$returnArray[5] = $value;
+			$SymCnt = $value;
 		}
 	}
 
@@ -51,16 +56,18 @@ function myFunction()
 
 	if($symFlag == 'on')
 	{
-		//$OutputPassword.='-';
-		$symNum = rand(1,32);
-		if($symNum<16)
-			$OutputPassword.=chr(32+$symNum);
-		else if($symNum<23)
-			$OutputPassword.=chr(42+$symNum);
-		else if($symNum<29)
-			$OutputPassword.=chr(68+$symNum);
-		else
-			$OutputPassword.=chr(94+$symNum);
+		for($i=0; $i<$SymCnt; ++$i)
+		{
+			$symNum = rand(1,32);
+			if($symNum<16)
+				$OutputPassword.=chr(32+$symNum);
+			else if($symNum<23)
+				$OutputPassword.=chr(42+$symNum);
+			else if($symNum<29)
+				$OutputPassword.=chr(68+$symNum);
+			else
+				$OutputPassword.=chr(94+$symNum);
+		}
 	}
 
 	if($numFlag=='on')
