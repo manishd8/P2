@@ -4,7 +4,7 @@ date_default_timezone_set('America/New_York');
 
 function myFunction()
 {
-	$returnArray = Array('',4,'off','off','off');
+	$returnArray = Array('',4,'off','off','off',1);
 	$OutputPassword='';
 	$caseFlag = 'off';
 	$WordArray = file("WordFile.txt");
