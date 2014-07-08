@@ -1,0 +1,13 @@
+div.MainBox{
+	width: 800px;
+	height: 400px;
+	margin: 0 auto;
+	background-color: gray;
+}
+
+h2.Output{
+	height: 30px;
+	background-color: white;
+	margin: 0 auto;
+	color: green;
+}
