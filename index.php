@@ -10,13 +10,13 @@
 <body>
 
   <?php $ValueArray = myFunction(); ?>
-    <div align="center" id='output'>
+    <div align="center">
         <h1>Password Generator</h1>
         <h2><?php echo $ValueArray[0]; ?></h2>
         
     </div>
 
-    <div align="center"m id="Form1">
+    <div align="center">
 
         <form action="index.php" method="GET">
             Number of words <select name = "WordCount">
@@ -40,7 +40,7 @@
     </div><br/><br/><br/><br/><br/><br/>
 
     <div align="center">
-      <img src = "http://imgs.xkcd.com/comics/password_strength.png" hight='400' width='500' style="float:center">
+      <img src = "http://imgs.xkcd.com/comics/password_strength.png" height='400' width='500' style="float:center">
     </div>
 
     
