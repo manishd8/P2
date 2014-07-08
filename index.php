@@ -14,8 +14,8 @@
 
   <div class="MainBox">
 
-      <div align="center">
-          <h1>Password Generator</h1>
+      <div>
+          <h1 class="Heading">Password Generator</h1><br/>
           <?php  
           $passStringLen = strlen($ValueArray[0]); 
           if($passStringLen<1)
@@ -36,12 +36,12 @@
             <?php echo $ValueArray[0]; ?>
           </h2>
           
-      </div><br/><br/>
+      </div><br/>
 
-      <div align="center">
+      <div>
 
           <form action="index.php" method="GET">
-              <select name = "WordCount">
+              <select class="Align" name = "WordCount">
                 <option value="1" <?php if($ValueArray[1] == 1) {?> selected = "selected"  <?php } ?>> 1 </option>
                 <option value="2" <?php if($ValueArray[1] == 2) {?> selected = "selected"  <?php } ?>> 2 </option>
                 <option value="3" <?php if($ValueArray[1] == 3) {?> selected = "selected"  <?php } ?>> 3 </option>
@@ -51,12 +51,15 @@
                 <option value="7" <?php if($ValueArray[1] == 7) {?> selected = "selected"  <?php } ?>> 7 </option>
             <!--    <option value="8" <?php if($ValueArray[1] == 8) {?> selected = "selected"  <?php } ?>> 8 </option>
                 <option value="9" <?php if($ValueArray[1] == 9) {?> selected = "selected"  <?php } ?>> 9 </option> -->
-              </select>Number of words <br/><br/>
+              </select> &nbsp; Number of words <br/><br/>
 
-              <input type="checkbox" name="NumberFlag" <?php if($ValueArray[2] == 'on') {?> checked = "checked"  <?php } ?>/>Include Number <br/><br/>
-              <input type="checkbox" name="SymbolFlag" <?php if($ValueArray[3] == 'on') {?> checked = "checked"  <?php } ?>/>Include Symbols  <br/><br/>
-              <input type="checkbox" name="UpperCaseFlag" <?php if($ValueArray[4] == 'on') {?> checked = "checked"  <?php } ?>/>UpperCase First Letter <br/><br/>
-              <input type="submit" value="Voila!" class="Submit"/>
+              <input class="Align" type="checkbox" name="NumberFlag" <?php if($ValueArray[2] == 'on') {?> checked = "checked"  <?php } ?>/> &nbsp; Include Number <br/><br/>
+              <input class="Align" type="checkbox" name="SymbolFlag" <?php if($ValueArray[3] == 'on') {?> checked = "checked"  <?php } ?>/> &nbsp; Include Symbols  <br/><br/>
+              <input class="Align" type="checkbox" name="UpperCaseFlag" <?php if($ValueArray[4] == 'on') {?> checked = "checked"  <?php } ?>/> &nbsp; UpperCase First Letter <br/><br/>
+
+              <div class="HeadingBox">
+                <input class="Center" type="submit" value="Voila!"/>
+              </div>
           </form> 
 
       </div>
