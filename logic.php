@@ -42,7 +42,7 @@ function myFunction()
 			$result[0] = chr(ord($firstChar)-32);
 		}
 
-		//$result = substr($result,0,(strlen($result)-1));
+		$result = substr($result,0,(strlen($result)-1));
 		$OutputPassword .= $result;
 		if($i<($WordCnt-1))
 			$OutputPassword.='-';
