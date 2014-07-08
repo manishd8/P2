@@ -48,6 +48,7 @@ function myFunction()
 			$OutputPassword.='-';
 	}
 
+
 	if($symFlag == 'on')
 	{
 		//$OutputPassword.='-';
