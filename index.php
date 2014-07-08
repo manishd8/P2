@@ -17,11 +17,17 @@
       <div align="center">
           <h1>Password Generator</h1>
           <?php  
-            $passStringLen = strlen($ValueArray[0])*12; 
-            if(strlen($ValueArray[0])<30){
-                $passStringLen = strlen($ValueArray[0])*13; 
+          $passStringLen = strlen($ValueArray[0]); 
+          if($passStringLen<1)
+            $passStringLen = 10;
+             
+            if($passStringLen<30){
+                $passStringLen*=13; 
                 $passStringLen*=(($passStringLen+5)/$passStringLen);
               }
+              else
+                $passStringLen*=12;
+
             $passString = 'width: ';
             $passString.=$passStringLen;
             $passString.='px';
