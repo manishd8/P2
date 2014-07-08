@@ -1,6 +1,0 @@
-.MainBox{
-	width: 500;
-	height: 400;
-	float:center;
-	background_color:grey;
-}
